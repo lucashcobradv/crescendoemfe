@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobbie Goods Cristão | Para Colorir e Refletir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #e6b450;
+            --accent: #7b9acc;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #5D9C59;
+            --pink: #FF85A2;
+            --purple: #A66CFF;
+            --green: #9ED2C6;
+            --blue-light: #B9F3FC;
+            --font-primary: 'Quicksand', sans-serif;
+            --font-child: 'Comic Neue', cursive;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: linear-gradient(135deg, #f0f9ff 0%, #e6f7ff 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(166, 108, 255, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 70%, rgba(255, 133, 162, 0.1) 0%, transparent 25%),
+                radial-gradient(circle at 30% 50%, rgba(158, 210, 198, 0.1) 0%, transparent 15%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-family: var(--font-child);
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span {
+            color: var(--secondary);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(74, 111, 165, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(74, 111, 165, 0.4);
+        }
+
+        .cta-button:after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20px;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(25deg);
+            transition: all 0.8s;
+        }
+
+        .cta-button:hover:after {
+            left: 120%;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 10%;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--pink) 0%, transparent 70%);
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 20%;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--green) 0%, transparent 70%);
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--primary);
+            font-family: var(--font-child);
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1 span:after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background: rgba(230, 180, 80, 0.3);
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(74, 111, 165, 0.1);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .book-cover {
+            width: 350px;
+            height: 500px;
+            background: linear-gradient(135deg, #fff 0%, #f1f5f9 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-5deg);
+            transition: transform 0.5s ease;
+            border: 10px solid white;
+        }
+
+        .book-cover:hover {
+            transform: rotate(-3deg) translateY(-10px);
+        }
+
+        .book-cover:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--pink) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, var(--purple) 0%, transparent 25%),
+                radial-gradient(circle at 40% 50%, var(--green) 0%, transparent 15%);
+            opacity: 0.2;
+        }
+
+        .book-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-title h2 {
+            font-family: var(--font-child);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .book-title p {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-style: italic;
+            margin: 0;
+        }
+
+        .floating-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .floating-icons div {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .floating-icons div:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+            width: 40px;
+            height: 40px;
+            background: var(--pink);
+            border-radius: 50%;
+        }
+
+        .floating-icons div:nth-child(2) {
+            top: 30%;
+            right: 15%;
+            animation-delay: 1s;
+            background: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .floating-icons div:nth-child(3) {
+            bottom: 20%;
+            left: 25%;
+            animation-delay: 2s;
+            background: var(--green);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .floating-icons div:nth-child(4) {
+            bottom: 40%;
+            right: 30%;
+            animation-delay: 3s;
+            background: var(--secondary);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="%23f0f9ff"/></svg>');
+            background-size: 100% 100%;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 60px;
+            font-family: var(--font-child);
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(74, 111, 165, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(74, 111, 165, 0.15);
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(74, 111, 165, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-family: var(--font-child);
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #e6f7ff 0%, #d1f0ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefits-text {
+            flex: 1;
+        }
+
+        .benefits-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-family: var(--font-child);
+        }
+
+        .benefits-list {
+            list-style: none;
+        }
+
+        .benefits-list li {
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .benefits-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .benefits-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            background: linear-gradient(135deg, #fff 0%, #f1f5f9 100%);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 10px solid white;
+        }
+
+        .illustration::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 10% 20%, var(--pink) 0%, transparent 20%),
+                radial-gradient(circle at 90% 70%, var(--purple) 0%, transparent 25%),
+                radial-gradient(circle at 40% 50%, var(--green) 0%, transparent 15%);
+            opacity: 0.1;
+        }
+
+        .illustration-content {
+            text-align: center;
+            padding: 30px;
+            z-index: 2;
+        }
+
+        .illustration-content i {
+            font-size: 6rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .illustration-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: var(--font-child);
+        }
+
+        .illustration-content p {
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 250px;
+            background: linear-gradient(135deg, var(--blue-light) 0%, var(--green) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item:nth-child(1) { background: linear-gradient(135deg, #FF9AA2 0%, #FFB7B2 100%); }
+        .gallery-item:nth-child(2) { background: linear-gradient(135deg, #FFDAC1 0%, #E2F0CB 100%); }
+        .gallery-item:nth-child(3) { background: linear-gradient(135deg, #B5EAD7 0%, #C7CEEA 100%); }
+        .gallery-item:nth-child(4) { background: linear-gradient(135deg, #F9C5D1 0%, #9795EF 100%); }
+
+        .gallery-item i {
+            opacity: 0.7;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border: 2px solid rgba(255, 133, 162, 0.1);
+        }
+
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: rgba(255, 133, 162, 0.1);
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-family: var(--font-child);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .pricing::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 Q50,100 100,0 L100,100 Q50,0 0,100 Z" fill="%23ffffff" opacity="0.2"/></svg>');
+            background-size: 100% 100%;
+            z-index: 1;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 25px;
+            padding: 50px 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+            border: 3px solid var(--secondary);
+        }
+
+        .pricing-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 20px 0;
+            font-family: var(--font-child);
+        }
+
+        .price span {
+            font-size: 1.5rem;
+            color: #777;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li i {
+            color: var(--success);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .highlight {
+            background: rgba(230, 180, 80, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 20px 0;
+            color: var(--dark);
+            font-weight: 600;
+            font-family: var(--font-child);
+            font-size: 1.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 70px 0 30px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            font-family: var(--font-child);
+        }
+
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+            }
+            
+            .hero-content {
+                padding-right: 0;
+                margin-bottom: 50px;
+            }
+            
+            .hero p {
+                margin: 0 auto 30px;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .benefits-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .book-cover {
+                width: 280px;
+                height: 400px;
+            }
+            
+            .price {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">BG</div>
+                <div class="logo-text">Bobbie<span>Goods</span></div>
+            </div>
+            <button class="cta-button">Comprar Agora</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bobbie Goods Cristão <br><span>Para Colorir e Refletir</span></h1>
+                <p>Um material de colorir com ilustrações suaves e mensagens cristãs inspiradoras, criado para momentos de paz e fé. Ideal para crianças e adultos, promove criatividade enquanto fortalece valores como amor, esperança e gratidão.</p>
+                
+                <div class="hero-buttons">
+                    <button class="cta-button">Comprar na Kiwify</button>
+                    <button class="btn-secondary">Ver Amostra</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="book-cover">
+                    <div class="book-title">
+                        <h2>Bobbie Goods</h2>
+                        <p>Crescendo na Fé!</p>
+                    </div>
+                    <div class="floating-icons">
+                        <div><i class="fas fa-heart"></i></div>
+                        <div><i class="fas fa-star"></i></div>
+                        <div><i class="fas fa-cross"></i></div>
+                        <div><i class="fas fa-dove"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">O Que Você Vai Encontrar</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Ilustrações Encantadoras</h3>
+                    <p>Desenhos suaves e delicados que encantam crianças e adultos, perfeitos para horas de colorir relaxante.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <h3>Mensagens Inspiradoras</h3>
+                    <p>Versículos bíblicos e reflexões cristãs que fortalecem a fé e os valores familiares.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Para Toda a Família</h3>
+                    <p>Atividades que unem gerações, criando momentos especiais de aprendizado e comunhão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2>Benefícios do Nosso Material</h2>
+                    
+                    <ul class="benefits-list">
+                        <li>Promove a criatividade e o desenvolvimento artístico</li>
+                        <li>Fortalece valores cristãos como amor, esperança e gratidão</li>
+                        <li>Ideal para atividades escolares e devocionais em família</li>
+                        <li>Material impresso de alta qualidade com ilustrações nítidas</li>
+                        <li>Acesso imediato após a compra - comece a usar hoje mesmo!</li>
+                        <li>Versátil - use em casa, na escola ou na igreja</li>
+                    </ul>
+                </div>
+                
+                <div class="benefits-image">
+                    <div class="illustration">
+                        <div class="illustration-content">
+                            <i class="fas fa-hands-praying"></i>
+                            <h3>Momento de Paz e Reflexão</h3>
+                            <p>Conecte-se com Deus através da arte e da meditação</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Algumas Páginas do Ebook</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-dove"></i>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-cross"></i>
+                </div>
+                <div class="gallery-item">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem Nossos Leitores</h2>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Meus filhos adoraram! Além de se divertirem colorindo, aprenderam valores importantes de uma forma leve e natural. Perfeito para o culto em família!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Mariana Silva</h4>
+                            <p>Mãe de dois</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Como professora da escola dominical, procurava um material assim há tempos! As ilustrações são lindas e as mensagens tocam o coração das crianças."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Carlos Oliveira</h4>
+                            <p>Professor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Comprei para presentear meus sobrinhos e acabei imprimindo uma cópia para mim também! Colorir essas páginas se tornou meu momento de paz e conexão com Deus."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ana Paula</h4>
+                            <p>Tia dedicada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <h2 class="section-title">Adquira Seu Ebook Hoje</h2>
+            
+            <div class="pricing-card">
+                <h3>Ebook Completo</h3>
+                <p>50 páginas de ilustrações e mensagens inspiradoras</p>
+                
+                <div class="price">R$ 24,90<span> / para sempre</span></div>
+                
+                <div class="highlight">LANÇAMENTO COM DESCONTO ESPECIAL</div>
+                
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Acesso imediato após a compra</li>
+                    <li><i class="fas fa-check"></i> Arquivo em PDF de alta qualidade</li>
+                    <li><i class="fas fa-check"></i> 50 ilustrações para colorir</li>
+                    <li><i class="fas fa-check"></i> Mensagens cristãs inspiradoras</li>
+                    <li><i class="fas fa-check"></i> Versículos bíblicos selecionados</li>
+                    <li><i class="fas fa-check"></i> Imprimível quantas vezes quiser</li>
+                </ul>
+                
+                <button class="cta-button">Comprar Agora na Kiwify</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Bobbie Goods</h3>
+                    <p>Material cristão de qualidade para crianças e famílias, promovendo criatividade e valores eternos.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-home"></i> Página Inicial</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Sobre o Produto</a></li>
+                        <li><a href="#"><i class="fas fa-comments"></i> Depoimentos</a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i> Comprar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-envelope"></i> contato@bobbiegoods.com</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> @bobbiegoods</a></li>
+                        <li><a href="#"><i class="fab fa-facebook"></i> /bobbiegoods</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Bobbie Goods Cristão. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de rolagem suave para links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animação para elementos quando entram na viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.feature-card, .testimonial-card, .pricing-card, .gallery-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Botão de compra
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Obrigado pelo interesse! Você será redirecionado para a página de compras na Kiwify.');
+                // Aqui você colocaria o redirecionamento para a Kiwify
+                // window.location.href = 'SEU_LINK_DA_KIWIFY';
+            });
+        });
+
+        // Animação adicional para elementos flutuantes
+        const floatElements = document.querySelectorAll('.floating-icons div');
+        floatElements.forEach(el => {
+            el.style.animationDelay = Math.random() * 3 + 's';
+        });
+    </script>
+</body>
+</html>
