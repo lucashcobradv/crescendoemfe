@@ -121,6 +121,9 @@
             box-shadow: 0 4px 15px rgba(74, 111, 165, 0.3);
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
         .cta-button:hover {
@@ -900,41 +903,25 @@
             }
         }
     </style>
-     <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src='https://connect.facebook.net/en_US/fbevents.js';
-    s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script');
-
-    fbq('init', 'SEU_ID_DO_PIXEL'); // substitua pelo seu ID
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=SEU_ID_DO_PIXEL&ev=PageView&noscript=1"/>
-  </noscript>
-</head>
-<body>
-
-  <h1>Obrigado pela compra!</h1>
-  <p>Seu pedido foi confirmado com sucesso.</p>
-  <button class="btn-comprar" onclick="registrarCompra()">Registrar Compra</button>
-
-  <!-- JS embutido -->
-  <script>
-    function registrarCompra() {
-      fbq('track', 'Purchase', {
-        value: 199.99, // valor da compra
-        currency: 'BRL'
-      });
-      alert("Compra registrada no Pixel!");
-    }
-  </script>
+    
+    <!-- Meta Pixel Code com seu ID configurado -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src='https://connect.facebook.net/en_US/fbevents.js';
+        s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script');
+        
+        fbq('init', '1885387632020877');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1885387632020877&ev=PageView&noscript=1"/>
+    </noscript>
 </head>
 <body>
     <!-- Header -->
@@ -944,7 +931,7 @@
                 <div class="logo-icon">CF</div>
                 <div class="logo-text">Crescendo em<span> Fé</span></div>
             </div>
-            <button class="cta-button"><a href="https://pay.kiwify.com.br/L3jPdSy">Comprar Agora</a></button>
+            <a href="https://pay.kiwify.com.br/L3jPdSy" class="cta-button">Comprar Agora</a>
         </div>
     </header>
 
@@ -956,7 +943,7 @@
                 <p>Um material de colorir com ilustrações suaves e mensagens cristãs inspiradoras, criado para momentos de paz e fé. Ideal para crianças e adultos, promove criatividade enquanto fortalece valores como amor, esperança e gratidão.</p>
                 
                 <div class="hero-buttons">
-                    <button class="cta-button"><a href="https://pay.kiwify.com.br/L3jPdSy">Comprar na Kiwify</a></button>
+                    <a href="https://pay.kiwify.com.br/L3jPdSy" class="cta-button">Comprar na Kiwify</a>
                     <button class="btn-secondary">Ver Amostra</button>
                 </div>
             </div>
@@ -1132,7 +1119,7 @@
                     <li><i class="fas fa-check"></i> Imprimível quantas vezes quiser</li>
                 </ul>
                 
-                <button class="cta-button"><a href="https://pay.kiwify.com.br/L3jPdSy">Comprar Agora na Kiwify</a></button>
+                <a href="https://pay.kiwify.com.br/L3jPdSy" class="cta-button">Comprar Agora na Kiwify</a>
             </div>
         </div>
     </section>
@@ -1152,7 +1139,7 @@
                         <li><a href="#"><i class="fas fa-home"></i> Página Inicial</a></li>
                         <li><a href="#"><i class="fas fa-book"></i> Sobre o Produto</a></li>
                         <li><a href="#"><i class="fas fa-comments"></i> Depoimentos</a></li>
-                        <li><a href="#"><i class="fas fa-shopping-cart"></i><a href="https://pay.kiwify.com.br/L3jPdSy"> Comprar</a></li>
+                        <li><a href="https://pay.kiwify.com.br/L3jPdSy"><i class="fas fa-shopping-cart"></i> Comprar</a></li>
                     </ul>
                 </div>
                 
@@ -1196,15 +1183,6 @@
             observer.observe(el);
         });
 
-        // Botão de compra
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Obrigado pelo interesse! Você será redirecionado para a página de compras na Kiwify.');
-                // Aqui você colocaria o redirecionamento para a Kiwify
-                // window.location.href = 'SEU_LINK_DA_KIWIFY';
-            });
-        });
-
         // Animação adicional para elementos flutuantes
         const floatElements = document.querySelectorAll('.floating-icons div');
         floatElements.forEach(el => {
@@ -1213,4 +1191,3 @@
     </script>
 </body>
 </html>
-
